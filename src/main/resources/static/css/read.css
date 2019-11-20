@@ -1,0 +1,53 @@
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.hero {
+    margin: 15px;
+}
+
+.table {
+    background-color: #f6af5e;
+    margin: auto;
+    max-width: 1200px;
+    max-height:570px;
+    border-color: rgb(237,92,42);
+    border-style: solid;
+    box-sizing: border-box;
+
+}
+
+.table-cell {
+    border: black;
+    border-style: solid;
+    border-width: thin;
+    padding: 10px;
+}
+
+#events {
+    display: flex;
+    max-height: 370px;
+    overflow: scroll;
+}
+
+.events-element {
+    flex-grow: 2;
+}
+
+#total-people {
+    text-align: right;
+}
+
+#comments {
+    text-align: right;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    padding: 7px;
+    background-color: rgb(237,92,42);
+    text-align: center;
+    font-weight: bold;
+}

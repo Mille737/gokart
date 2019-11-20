@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{css/home.css}">
+    <title>Home</title>
+</head>
+<body>
+<header class="header" onclick="window.location.href = 'home.html';">
+    <img th:src="@{img/RRClogo.png}">
+</header>
+<main>
+    <div class="hero">
+        <img th:src="@{img/gokart-banner.png}"/>
+        <div class="button-square">
+            <button id="create" onclick="window.location.href = 'create.html';">Book tid</button>
+            <button id="edit">Ændre booking</button>
+            <button id="read" onclick="window.location.href = 'read.html';">Se booking</button>
+            <button id="delete">Slet booking</button>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <p class="company-info">Tlf: +45 70 25 00 86 &emsp; | &emsp; E-mail: info@roskilderacingcenter.dk</p>
+</footer>
+</body>
+</html>
