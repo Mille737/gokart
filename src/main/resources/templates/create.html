@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{css/create.css}">
@@ -13,14 +13,17 @@
     <img th:src="@{img/RoskildeRacing.png}">
     <form>
         <div class="form-element"> <label for="name">Fulde navn:</label> <input id="name" type="text" required></div>
-        <div class="form-element"> <label for="company">Firma navn:</label> <input id="company" type="text">&emsp; * Optional</div>
+        <div class="form-element"> <label for="company">Firma navn:</label> <input id="company" type="text"></div>
         <div class="form-element"> <label for="email">E-mail:</label> <input id="email" type="email" required></div>
-        <div class="form-element"> <label for="phone-number">Kontakt nummer:</label> <input id="phone-number" type="tel" pattern="[0-9]{8}" required></div>
+        <div class="form-element"> <label for="phone-number">Telefonnummer:</label> <input id="phone-number" type="tel" pattern="[0-9]{8}" required></div>
         <div class="form-element"> <label for="date">Dato:</label> <input id="date" type="date" required></div>
         <div class="form-element"> <label for="time">Tid:</label> <input id="time" type="time" required></div>
+        <div class="form-element"> <label for="people">PAX:</label> <input id="people" type="number" min="1"required></div>
         <div class="form-element"> <label for="time-length">Varighed:</label> <input id="time-length"  type="number" min="30" step="30" required>
-                        <input type="text" id="time-length2" value="Min" readonly></div>
-        <div class="form-element"> <input id="submit" type="submit" value="Gem"></div>
+            <input type="text" id="time-length2" value="Min" readonly></div>
+        <div class="form-element"> <label for="comment">Kommentar:</label> <textarea id="comment"></textarea></div>
+
+        <div class="form-element"> <input id="submit" type="submit" value="Opret Booking"></div>
     </form>
 </main>
 <footer class="footer">

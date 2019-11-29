@@ -51,6 +51,14 @@ input:focus {
     border-color: lightgrey;
     background-color: #f6af5e;
 }
+#comments:focus{
+    width: 200px;
+    height: 30px;
+    resize: none;
+}
+#comments{
+    resize: none;
+}
 #submit {
     font-size: 20px;
     margin: 60px auto 0;
