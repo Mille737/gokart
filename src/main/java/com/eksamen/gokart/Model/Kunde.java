@@ -1,7 +1,10 @@
 package com.eksamen.gokart.Model;
 
+import javax.validation.constraints.NotNull;
+
 public class Kunde {
-    String navn;
+    @NotNull
+    public String navn;
     String firma;
     String email;
     int nummer;

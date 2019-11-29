@@ -32,11 +32,11 @@ public class Booking {
         this.tid = tid;
     }
 
-    public int getpax() {
+    public int getPax() {
         return pax;
     }
 
-    public void setpax(int PAX) {
+    public void setPax(int pax) {
         this.pax = pax;
     }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{css/create.css}">
@@ -11,17 +11,17 @@
 </header>
 <main>
     <img th:src="@{img/RoskildeRacing.png}">
-    <form action="#" th:action="@{/create.html}" th:object="${Kunde, Booking}" method="post">
-        <div class="form-element"> <label for="navn">Fulde navn:</label> <input th:field="*{navn}" id="navn" type="text" required></div>
+    <form action="#" th:action="@{/}" th:object="${Kunde}" method="post">
+        <div class="form-element"> <label th:for="navn">Fulde navn:</label> <input type="text" th:field="*{navn}" name="navn" id="navn"  required/></div>
         <div class="form-element"> <label for="firma">Firma navn:</label> <input th:field="*{firma}" id="firma" type="text"></div>
         <div class="form-element"> <label for="email">E-mail:</label> <input th:field="*{email}" id="email" type="email" required></div>
         <div class="form-element"> <label for="nummer">Telefonnummer:</label> <input th:field="*{nummer}" id="nummer" type="tel" pattern="[0-9]{8}" required></div>
         <div class="form-element"> <label for="dato">Dato:</label> <input th:field="*{dato}" id="dato" type="date" required></div>
         <div class="form-element"> <label for="tid">Tid:</label> <input th:field="*{tid}" id="tid" type="time" required></div>
         <div class="form-element"> <label for="pax">PAX:</label> <input th:field="*{pax}" id="pax" type="number" min="1" required></div>
-        <div class="form-element"> <label for="varighed">Varighed:</label> <input id="varighed"  type="number" min="30" step="30" required>
+        <div class="form-element"> <label for="varighed">Varighed:</label> <input th:field="*{varighed}" id="varighed"  type="number" min="30" step="30" required>
                         <input type="text" id="varighed2" value="Min" readonly></div>
-        <div class="form-element"></div> <label for="kommentar">Kommentar:</label><textarea id="kommentar"></textarea>
+        <div class="form-element"></div> <label for="kommentar">Kommentar:</label><textarea th:field="*{kommentar}" id="kommentar"></textarea>
         <div class="form-element"> <input id="submit" type="submit" value="Opret Booking"></div>
     </form>
 </main>
