@@ -53,7 +53,7 @@ input:focus {
 }
 
 #comment {
-    width: 40px;
+    width: 200px;
     height: 30px;
     resize: none;
 }
