@@ -11,28 +11,17 @@
 </header>
 <main>
     <img th:src="@{img/RoskildeRacing.png}">
-    <form>
-        <div class="form-element"> <label for="navn">Fulde navn:</label> <input id="navn" type="text" required></div>
-        <div class="form-element"> <label for="firma">Firma navn:</label> <input id="firma" type="text"></div>
-        <div class="form-element"> <label for="email">E-mail:</label> <input id="email" type="email" required></div>
-<<<<<<< HEAD
-        <div class="form-element"> <label for="phoneNumber">Telefonnummer:</label> <input id="phoneNumber" type="tel" pattern="[0-9]{8}" required></div>
-        <div class="form-element"> <label for="date">Dato:</label> <input id="date" type="date" required></div>
-        <div class="form-element"> <label for="time">Tid:</label> <input id="time" type="time" required></div>
-        <div class="form-element"> <label for="people">PAX:</label> <input id="people" type="number" min="1" required></div>
-        <div class="form-element"> <label for="time-length">Varighed:</label> <input id="time-length"  type="number" min="30" step="30" required>
-                        <input type="text" id="time-length2" value="Min" readonly></div>
-        <div class="form-element"></div> <label for="comment">Kommentar:</label><textarea id="comment"></textarea>
-=======
-        <div class="form-element"> <label for="nummer">Telefonnummer:</label> <input id="nummer" type="tel" pattern="[0-9]{8}" required></div>
-        <div class="form-element"> <label for="dato">Dato:</label> <input id="dato" type="date" required></div>
-        <div class="form-element"> <label for="tid">Tid:</label> <input id="tid" type="time" required></div>
-        <div class="form-element"> <label for="pax">PAX:</label> <input id="pax" type="number" min="1" required></div>
+    <form action="#" th:action="@{/create.html}" th:object="${Kunde, Booking}" method="post">
+        <div class="form-element"> <label for="navn">Fulde navn:</label> <input th:field="*{navn}" id="navn" type="text" required></div>
+        <div class="form-element"> <label for="firma">Firma navn:</label> <input th:field="*{firma}" id="firma" type="text"></div>
+        <div class="form-element"> <label for="email">E-mail:</label> <input th:field="*{email}" id="email" type="email" required></div>
+        <div class="form-element"> <label for="nummer">Telefonnummer:</label> <input th:field="*{nummer}" id="nummer" type="tel" pattern="[0-9]{8}" required></div>
+        <div class="form-element"> <label for="dato">Dato:</label> <input th:field="*{dato}" id="dato" type="date" required></div>
+        <div class="form-element"> <label for="tid">Tid:</label> <input th:field="*{tid}" id="tid" type="time" required></div>
+        <div class="form-element"> <label for="pax">PAX:</label> <input th:field="*{pax}" id="pax" type="number" min="1" required></div>
         <div class="form-element"> <label for="varighed">Varighed:</label> <input id="varighed"  type="number" min="30" step="30" required>
                         <input type="text" id="varighed2" value="Min" readonly></div>
         <div class="form-element"></div> <label for="kommentar">Kommentar:</label><textarea id="kommentar"></textarea>
->>>>>>> nadia
-
         <div class="form-element"> <input id="submit" type="submit" value="Opret Booking"></div>
     </form>
 </main>
